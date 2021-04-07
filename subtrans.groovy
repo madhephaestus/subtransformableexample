@@ -25,7 +25,10 @@ println "Offset calculated "+offseCalculated
 
 Transform frame3 = frame2.movey(offseCalculated)
 
-CSG cube3=cube2.movey(offseCalculated)
+CSG cube3=cube.transformed(frame3)
+Vector3d point3 = point.transformed(frame3)
+println "Final location of the point "+point3
+
 
 return cube3
 	
